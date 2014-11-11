@@ -36,31 +36,53 @@
 			</div>
 		</div>
 
-		<!-- Container / Centre Stuff -->
-		<div class="container">
-			<div class="jumbotron">
-				<h1>Hello, World!</h1>
-				<p>I ... I like it...</p>
-			</div>
-		</div>
 
-
-
-		<!-- Article Stuff -->
-		<div class="container"  ng-controller="ArticleController as articleCtrl">
+		<!-- Article stuff -->
+		<div class="container" ng-controller="ArticleController as articleCtrl">
 			<div class="row">
-				<div class="col-md-3" ng-repeat="article in articleCtrl.articles">
-					<h3><a href="#">{{article.articleTitle}}</a></h3>
-					<p>{{article.articleContent}}</p>
-					<a href="#" class="btn btn-default" ng-show="article.moreToRead">Read More!</a>
+
+				<div class="col-lg-9">
+					<div class="panel panel-default">
+
+						<div class="panel-body">
+							
+							<div class="page-header">
+								<h3>All the Turkeys! <small>Posted on (DATE HERE)</small></h3>
+							</div>
+
+							<img class="featureImg "src="">
+							<p>sdfsdgdfgdfg</p>
+							<p>sdfsdgdfgdfg</p>
+							<p>sdfsdgdfgdfg</p>
+							<p>sdfsdgdfgdfg</p>
+							<p>sdfsdgdfgdfg</p>
+							<p>sdfsdgdfgdfg</p>
+							<p>sdfsdgdfgdfg</p>
+							<p>sdfsdgdfgdfg</p>
+							<p>sdfsdgdfgdfg</p>
+							<p>sdfsdgdfgdfg</p>
+							<p>sdfsdgdfgdfg</p>
+							<p>sdfsdgdfgdfg</p>
+
+
+						</div>
+
+					</div>
 				</div>
+
+				<div class="col-lg-3" ng-repeat="article in articleCtrl.articles | limitTo: 4">
+					<div class="list-group" ng-click="articleCtrl.articleClicked(article)">
+						<a href="#" class="list-group-item" ng-class="{active:article.currentArticle}">
+							<h4 class="list-group-item-heading">
+								{{article.articleTitle}}
+							</h4>
+							<p class="list-group-item-text">{{article.articleContent}}</p>
+						</a>
+					</div>
+				</div>
+
 			</div>
 		</div>
-
-
-
-
-
 
 
 
