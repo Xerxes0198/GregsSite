@@ -11,7 +11,7 @@
 
 		<div class="collapse navbar-collapse navHeaderCollapse">
 			<ul class="nav navbar-nav navbar-right" ng-repeat="menuItem in menuCtrl.menuItems">
-				<li><a ng-href="{{menuItem.Link}}">{{menuItem.Name}}</a></li>
+				<li><a ng-href="{{menuItem.Link}}" ng-click="menuCtrl.menuItemClicked(menuItem)">{{menuItem.Name}}</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown">

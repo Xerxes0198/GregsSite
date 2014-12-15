@@ -10,14 +10,14 @@
     {
       var dir = {};
       dir.restrict = 'E';
-      dir.templateUrl = 'views/top-Menu.html';
+      dir.templateUrl = '/views/top-Menu.html';
       dir.controller = function()
       {
         this.currentMenuItem = {};
         this.menuItems = menuItems;
         this.subMenuItems = subMenuItems;
 
-        this.menuItemClicked = function()
+        this.menuItemClicked = function(menuItem)
         {
           alert(meunItem + ' clicked!');
         }
@@ -31,11 +31,11 @@
     [
       {
         Name:   'Home',
-        Link:   'index.html'
+        Link:   '/index.html'
       },
       {
         Name:   'SQL Things',
-        Link:   'sqlThings.html'
+        Link:   '/pages/sqlStuff.html'
       }
     ];
 

@@ -20,10 +20,8 @@
 		{
 			var dir = {};
 			dir.restrict = 'E';
-			dir.templateUrl = 'views/footer.html';
+			dir.templateUrl = '/views/footer.html';
 			return dir;
 		});
-
-
 	}
 )();
